@@ -22,7 +22,7 @@ pipeline {
         stage('Build Docker image') {
             steps {
                 script {
-                    docker.build("${REPOSITORY_URI}:${IMAGE_TAG}", "-f docker/Dockerfile .")
+                    docker.build("${REPOSITORY_URI}:${IMAGE_TAG}", "-f docker/Dockerfile.dockerfile .")
                 }
             }
         }
