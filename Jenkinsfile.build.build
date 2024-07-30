@@ -6,8 +6,8 @@ pipeline {
     }
     parameters {
         // 빌드 파라미터로 추가
-        string(name: 'USER_NAME', defaultValue: 'yejin', description: 'User name for the Docker image')
-        string(name: 'AWS_ACCOUNT_ID', defaultValue: '779475221336', description: 'AWS Account ID')
+        string(name: 'USER_NAME', defaultValue: 'changhoon', description: 'User name for the Docker image')
+        string(name: 'AWS_ACCOUNT_ID', defaultValue: '882246222011', description: 'AWS Account ID')
     }
 
     environment {
