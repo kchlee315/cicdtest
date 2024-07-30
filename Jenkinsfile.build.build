@@ -35,7 +35,7 @@ pipeline {
                 script {
                     // 조건에 따라서 동적으로 스크립트 실행 
                     if(params.USER_NAME == 'changhoon' ){
-                        docker.build("${REPOSITORY_URI}:${IMAGE_TAG}", "-f docker/Dockerfile .")
+                        docker.build("${REPOSITORY_URI}:${IMAGE_TAG}", "-f docker/Dockerfile.dockerfile .")
                     }
                 }
             }
