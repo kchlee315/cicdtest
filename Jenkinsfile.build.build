@@ -57,7 +57,7 @@ pipeline {
                  script {
                      parallel(
                          service1: {
-                             // service1 이미지를 빌드하고 푸
+                             // service1 이미지를 빌드하고 푸시
                              docker.build("${REPOSITORY_URI}:${IMAGE_TAG}", "-f docker/Dockerfile.dockerfile .")
                              sh "aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
                              docker.image("${REPOSITORY_URI}:${IMAGE_TAG}".toString()).push()
