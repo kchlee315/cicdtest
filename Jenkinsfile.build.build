@@ -19,7 +19,7 @@ pipeline {
         USER_NAME = "${params.USER_NAME}"
         AWS_ACCOUNT_ID = "${params.AWS_ACCOUNT_ID}"
 
-        DOCKER_IMAGE = "${USER_NAME}-ecr-repo2"
+        DOCKER_IMAGE = "${USER_NAME}-ecr-repo"
         AWS_DEFAULT_REGION = 'ap-northeast-2'
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${DOCKER_IMAGE}"
         IMAGE_TAG = "latest"
