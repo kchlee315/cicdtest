@@ -25,21 +25,21 @@ pipeline {
         IMAGE_TAG = "latest"
     }
 
-    stages {
-        stage('Build Docker image') {
-            when {
-                // User_Name 이 특정값 일 때만 실행
-                expression { params.USER_NAME == 'changhoon' }
-            }
-            steps {
-                script {
-                    // 조건에 따라서 동적으로 스크립트 실행 
-                    if(params.USER_NAME == 'changhoon' ){
-                        docker.build("${REPOSITORY_URI}:${IMAGE_TAG}", "-f docker/Dockerfile.dockerfile .")
-                    }
-                }
-            }
-        }
+//    stages {
+//        stage('Build Docker image') {
+//            when {
+//                // User_Name 이 특정값 일 때만 실행
+//                expression { params.USER_NAME == 'changhoon' }
+//            }
+//            steps {
+//                script {
+//                    // 조건에 따라서 동적으로 스크립트 실행 
+//                    if(params.USER_NAME == 'changhoon' ){
+//                        docker.build("${REPOSITORY_URI}:${IMAGE_TAG}", "-f docker/Dockerfile.dockerfile .")
+//                    }
+//                }
+//            }
+//        }
 
         stage('Push to AWS ECR') {
             steps {
