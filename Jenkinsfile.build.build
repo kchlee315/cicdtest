@@ -11,7 +11,7 @@ pipeline {
     }
 
     environment {
-        // // 안에 값을 변경해주세요
+        // // 안에 값을 변경해주세요!
         // USER_NAME = 'changhoon'
         // AWS_ACCOUNT_ID = '882246222011'
 
